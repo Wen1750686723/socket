@@ -28,7 +28,7 @@ do {
 	}
 	//welcome  发送到客户端
 	$msg = "<font color='red'>server send:welcome</font><br/>";
-	socket_write($msgsock, $msg, strlen($msg));
+	socket_write($msgsock, time(), 10);
 	echo 'read client message\n';
 	$buf = socket_read($msgsock, 8192);
 	$talkback = "received message:$buf\n";
